@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+
+
+<div style="width:400px; height:auto">
+    <%= link_to image_tag(@post.image, style:'width:100%'), post_path %>
+</div>
+
+<%= render @post %>
+
+<div>
+  <%= link_to "Edit this post", edit_post_path(@post) %> |
+  <%= link_to "Back to posts", posts_path %>
+
+  <%= button_to "Destroy this post", @post, method: :delete %>
+</div>
+
+<%= link_to "Comments",post_comments_path(@post) %>
